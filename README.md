@@ -4,12 +4,6 @@ Um gerador de palpites para a **Mega Sena** desenvolvido com HTML, CSS (SCSS) e 
 
 ---
 
-## Preview
-
-> _Adicione aqui um screenshot da aplicação._
-
----
-
 ## Funcionalidades
 
 - 🎯 Sorteio de múltiplos jogos em uma única rodada
@@ -73,3 +67,7 @@ Desenvolvido por **Renata Stephanie**
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/renata-stephanie/)
 
 [![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/users/874828318845857813)
+
+## Preview
+
+[![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)](https://palpites-mega-sena.vercel.app/)
