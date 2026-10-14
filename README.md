@@ -69,4 +69,4 @@ Desenvolvido por **Renata Stephanie**
 [![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/users/874828318845857813)
 
 ## Deploy
-[![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)](palpites-mega-sena-blond.vercel.app)
+[![Vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white)](https://palpites-mega-sena-blond.vercel.app)
