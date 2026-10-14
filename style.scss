@@ -1,0 +1,282 @@
+// ===================================
+// VARIÁVEIS
+// ===================================
+
+$cor-primaria: #1a7a3c;
+$cor-primaria-escura: #145e2d;
+$cor-destaque: #00d46a;
+$cor-fundo: #0d1f12;
+$cor-card: #1b2f20;
+$cor-texto: #e8f5e9;
+$cor-texto-suave: #90a890;
+$cor-numero: #ffd700;
+$cor-placeholder: #3a5a3e;
+$cor-btn-limpar: #c0392b;
+$cor-btn-limpar-hover: #922b21;
+$fonte-principal: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+$borda-radius: 16px;
+$borda-radius-numero: 50%;
+$sombra-card: 0 8px 32px rgba(0, 0, 0, 0.4);
+$sombra-numero: 0 4px 15px rgba(0, 212, 106, 0.3);
+$sombra-btn: 0 4px 15px rgba(26, 122, 60, 0.5);
+
+// RESET E BASE
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $fonte-principal;
+  background-color: $cor-fundo;
+  color: $cor-texto;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 16px;
+
+  // Textura sutil no fundo
+  background-image: radial-gradient(ellipse at top, #1a3a22 0%, $cor-fundo 60%);
+}
+
+// CONTAINER
+.container {
+  width: 100%;
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+// HEADER
+.header{
+  text-align: center;
+  padding: 16px 0;
+
+  .header-titile{
+    font-size: 2.8rem ;
+    font-weight: 800;
+    letter-spacing: -1px;
+    background: linear-gradient(135deg, $cor-destaque, $cor-numero);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-top: 6px;
+  }
+
+  .header-subtitle{
+    font-size: 1rem;
+    color: $cor-texto-suave;
+    letter-spacing: 0.5px;
+  }
+}
+
+// CARD
+.card{
+  background-color: $cor-card;
+  border: 1px solid rgba($cor-destaque, 0.15);
+  border-radius: $borda-radius;
+  padding: 32px 28px;
+  box-shadow: $sombra-card;
+  transition: border-color 0.3s ease;
+
+  &:hover{
+    border-color: rgba($cor-destaque, 0.35);
+  }
+
+  .card-title{
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: $cor-texto-suave;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 24px;
+  }
+}
+
+// NÚMEROS
+.numeros {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 32px;
+}
+
+.numero{
+  width: 68px;
+  height: 68px;
+  border-radius: $borda-radius-numero;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 800;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:not(.placeholder){
+    background: linear-gradient(135deg, $cor-primaria, $cor-destaque);
+    color: #fff;
+    box-shadow: $sombra-numero;
+    animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    &:hover{
+      transform: scale(1.1);
+      box-shadow: 0 6px 20px rgba($cor-destaque, 0.5);
+    }
+  }
+
+  // Estado placeholder
+  &.placeholder{
+    background-color: $cor-placeholder;
+    color: $cor-texto-suave;
+    border: 2px dashed rgba($cor-destaque, 0.25);
+  }
+}
+
+// ANIMAÇÃO DOS NUMEROS
+@keyframes popIn {
+  0% {
+    transform: scale(0) rotate(-15deg);
+    opacity: 0;
+  }
+
+  80% {
+    transform: scale(1.1) rotate(3deg);
+  }
+
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+// BOTÕES
+.acoes {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 14px 32px;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+
+  &:active{
+    transform: scale(0.96);
+  }
+
+  //Botão Sortear
+  .btn--sorteador{
+    background: linear-gradient(135deg, $cor-primaria, $cor-destaque);
+    color: #fff;
+    box-shadow: $sombra-btn;
+
+    &:hover{
+      background: linear-gradient(135deg, $cor-destaque, $cor-primaria);
+      box-shadow: 0 6px 22px rgba($cor-destaque, 0.55);
+      transform: translateY(-2px);
+    }
+  }
+
+  .btn--limpar{
+    background-color: transparent;
+    color: $cor-btn-limpar;
+    border: 2px solid $cor-btn-limpar;
+
+    &:hover{
+      background-color: $cor-btn-limpar;
+      color: #fff;
+      transform: translateY(-2px);
+    }
+  }
+}
+
+//HISTÓRICO
+.historico-card {
+  padding: 28px;
+}
+
+.historico{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &-vazio{
+    color: $cor-texto-suave;
+    font-style: italic;
+    font-size: 0.95rem;
+    text-align: center;
+    padding: 16px 0;
+  }
+
+  // Item do histórico
+  &__item{
+    background-color: rgba($cor-destaque, 0.05);
+    border: 1px solid rgba($cor-destaque, 0.12);
+    border-radius: 10px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: $cor-texto;
+    transition: background 0.2s ease;
+
+    &:hover{
+      background-color: rgba($cor-destaque, 0.01);
+    }
+
+    span{
+      font-weight: 700;
+      color: $cor-numero;
+      letter-spacing: 2px;
+    }
+  }
+}
+
+// FOOTER
+.footer{
+  text-align: center;
+  color: $cor-texto-suave;
+  font-size: 0.8rem;
+  padding-bottom: 20px;
+  opacity: 0.7;
+}
+
+// RESPONSIVIDADE
+@media (max-width: 480px){
+  .header{
+    &-title{
+      font-size: 2rem;
+    }
+  }
+
+  .numero{
+    width: 56px;
+    height: 56px;
+    font-size: 1.2rem;
+  }
+
+  .btn{
+    padding: 12px 22px;
+    font-size: 0.95rem;
+  }
+
+  .card{
+    padding: 24px 18px;
+  }
+}

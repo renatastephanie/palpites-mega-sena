@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Sorteador Mega Sena</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 class="header-titile">Mega Sena 🍀</h1>
+        <p class="header-subtitle">Sorteie seus números da sorte</p>
+      </header>
+
+      <main class="main">
+        <section class="card">
+          <h2 class="card-title">Seus números sorteados</h2>
+
+          <div class="numeros" id="numeros-container">
+            <!-- Os numeros sorteados serão gerados aqui via JavaScript -->
+            <span class="numero placeholder">?</span>
+            <span class="numero placeholder">?</span>
+            <span class="numero placeholder">?</span>
+            <span class="numero placeholder">?</span>
+            <span class="numero placeholder">?</span>
+            <span class="numero placeholder">?</span>
+            <span class="numero placeholder">?</span>
+          </div>
+
+          <div class="acoes">
+            <button class="btn btn--sorteador" id="btn-sortear">
+              Sortear Números
+            </button>
+            <button class="btn btn--limpar" id="btn-limpar">Limpar</button>
+          </div>
+        </section>
+
+        <section class="card historico-card">
+          <h2 class="card-title">Histórico de Palpites</h2>
+          <ul class="historico" id="historico-lista">
+            <!-- Palpites anteriores aparecerão aqui -->
+            <li class="historico-vazio">Nenhum palpite ainda.</li>
+          </ul>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>
+          Os número são gerados aleatoriamente e não garantem premiação.
+        </p>
+      </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
